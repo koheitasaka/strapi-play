@@ -5,7 +5,6 @@ import type { AppContext, AppProps } from 'next/app';
 import App from 'next/app';
 import Head from 'next/head';
 import { createContext } from 'react';
-import '../assets/css/style.css';
 import { fetchAPI } from '../libs/api';
 import { getStrapiMedia } from '../libs/media';
 import '../styles/globals.css';
