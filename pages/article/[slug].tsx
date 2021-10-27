@@ -70,6 +70,17 @@ const Article = ({ article, categories }: any) => {
 
 export async function getStaticPaths() {
   const articles = await fetchAPI('/articles');
+  if (!articles) {
+    return {
+      paths: [
+        {
+          params: {
+            slug: 'no articles',
+          },
+        },
+      ],
+    };
+  }
 
   return {
     paths: articles.map((article: any) => ({
