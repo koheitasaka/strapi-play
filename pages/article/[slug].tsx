@@ -1,6 +1,5 @@
 /* eslint-disable react/no-children-prop */
 /* eslint-disable jsx-a11y/alt-text */
-import ReactMarkdown from 'react-markdown';
 import Moment from 'react-moment';
 import Image from '../../components/image';
 import Layout from '../../components/layout';
@@ -32,13 +31,7 @@ const Article = ({ article, categories }: any) => {
       </div>
       <div className="uk-section">
         <div className="uk-container uk-container-small">
-          {article.content && (
-            <ReactMarkdown
-              sourcePos={article.content}
-              skipHtml={false}
-              children={article.content}
-            />
-          )}
+          {article.content && <div>{article.content}</div>}
           <hr className="uk-divider-small" />
           <div className="uk-grid-small uk-flex-left" data-uk-grid="true">
             <div>
